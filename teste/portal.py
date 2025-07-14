@@ -2,7 +2,6 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-# Dados fictícios das notícias (substitua com sua fonte de dados real)
 noticias = {
     "esportes": [
         {"titulo": "Brasil vence a Argentina", "conteudo": "Notícia sobre a vitória do Brasil."},
@@ -15,8 +14,8 @@ noticias = {
         {"titulo": "lançamento do live-action de como treinar o seu dragão atrai multidão pros cinema" }
     ],
     "lazer": [
-        {"titulo": "Exposição de arte em São Paulo", "conteudo": "Notícia sobre a exposição de arte."},
-        {"titulo": "Novo filme brasileiro", "conteudo": "Notícia sobre o novo filme brasileiro."},
+        {"titulo": "Exposição de arte em São Paulo", "conteudo": "Exposição de arte em SP é dedica a artista brasileira Tarsila do Amaral."},
+        {"titulo": "Oscar: 2025, Brasil e mais", "conteudo": "Brasil ganha seu primeiro oscar por Ainda Estou Aqui, na categoria melhor filme internacional."},
     ],
 }
 
