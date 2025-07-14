@@ -1,23 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bem-Vindo</title>
+    <title>Bem-vindo</title>
+    <style>
+        body.claro {
+            background-color: #ffffff;
+            color: #000000;
+        }
+        body.escuro {
+            background-color: #121212;
+            color: #ffffff;
+        }
+    </style>
 </head>
-<body>
-    <h1>Bem Vindo, {{user}}!</h1>
-    <br>
-    <p></p>
-    <button>Noticias</button>
+<body class="{{ tema }}">
+    <h1>Bem-vindo(a), {{ user }}!</h1>
+    <p>Você acessou esta página {{ visitas }} vezes nesta sessão.</p>
 
-    <div>
-        <a href="esporte1.html">esportes</a><br>
-        <a href="">entreterimento</a><br>
-        <a href="">lazer</a>
-    </div>
-      
+    <p>Escolha o tema:</p>
+    <a href="{{ url_for('escolher_tema', modo='claro') }}">Claro</a> |
+    <a href="{{ url_for('escolher_tema', modo='escuro') }}">Escuro</a>
 
+    <p><a href="{{ url_for('noticias_page') }}">Ir para a página de notícias</a></p>
+    <p><a href="{{ url_for('logout') }}">Logout</a></p>
 </body>
 </html>
-
